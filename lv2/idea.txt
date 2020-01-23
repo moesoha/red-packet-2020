@@ -1,0 +1,5 @@
+对 Surface 的 Type Cover 进行抓包。
+
+可以通过分析 USB 数据包，然后提取其中键盘输入记录，找到通往下一关的网址。
+
+网址就强行定为 https://hb.lohu.info/791de18ac27dfbf/52ed990ff87/91e851e85c48e.bin
