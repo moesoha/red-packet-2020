@@ -15,21 +15,14 @@ RUN sed -i -E 's/(deb|security).debian.org/ipv4.mirrors.ustc.edu.cn/g' /etc/apt/
 	&& mkdir -p /app/prepare /app/www
 ADD . /app/prepare/
 
-# fix fastcgi bug & create nginx directory
-RUN mkdir -p /run/nginx && \
-	echo -e '\nfastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;' > /etc/nginx/fastcgi_params
-
-# configure services
 RUN rm -f /etc/nginx/conf.d/default.conf /etc/php/7.2/fpm/pool.d/* \
 	&& cp -v /app/prepare/_docker/run.sh /app/run.sh \
 	&& cp -v /app/prepare/_docker/nginx.conf /etc/nginx/conf.d/www.conf \
 	&& cp -v /app/prepare/_docker/php-fpm.ini /usr/local/etc/php-fpm.d/pool.conf \
-	&& cd /app/prepare/lv2 && chmod a+x ./import_db.sh && ./import_db.sh
-
-# deploy code
-RUN echo "Start deploy code" \
+	&& cd /app/prepare/lv2 && chmod a+x ./import_db.sh && ./import_db.sh \
+	&& echo "deploying codes" \
 	&& cp -vr /app/prepare/*/deploy/* /app/www/ \
-	&& chown -R root /app/www && chmod 755 /app/www
+	&& chown -R root /app/www && chmod 755 /app/www /app/run.sh
 
 EXPOSE 80
 CMD ["/app/run.sh"]
