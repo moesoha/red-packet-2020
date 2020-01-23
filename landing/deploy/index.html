@@ -63,6 +63,44 @@
 				top: 58%;
 				box-shadow: -5px 5px rgba(0,0,0,0.38);
 			}
+			
+			#lv1 {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 540px;
+			}
+			#lv1 img {
+				width: 100%;
+			}
+			#lv1 .main {
+				text-align: center;
+				position: absolute;
+				transform: translate(-50%, -50%);
+				left: 50%;
+				top: 50%;
+				width: 380px;
+			}
+			
+			#lv1 {
+				visibility: hidden;
+				opacity: 0;
+				transition: ease all 2s;
+			}
+			.redbag {
+				visibility: visible;
+				opacity: 1;
+				transition: ease all 2s;
+			}
+			.opened #lv1 {
+				visibility: visible;
+				opacity: 1;
+			}
+			.opened .redbag {
+				visibility: hidden;
+				opacity: 0;
+			}
 		</style>
 	</head>
 	<body>
@@ -72,12 +110,19 @@
 					<img src="data:image/svg+xml;utf8;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNDI1LjI5IiBjeT0iODcuMjExIiBmaWxsPSIjZGFkOGRiIiByPSI4Ni43MSIvPjxjaXJjbGUgY3g9Ijg2LjcxIiBjeT0iODcuMjExIiBmaWxsPSIjYzhjNWM5IiByPSI4Ni43MSIvPjxjaXJjbGUgY3g9Ijg2LjcxIiBjeT0iODcuMjExIiBmaWxsPSIjZmY5YTlmIiByPSI1My42NzciLz48Y2lyY2xlIGN4PSI0MjUuMjkiIGN5PSI4Ny4yMTEiIGZpbGw9IiNmZmI5YjQiIHI9IjUzLjY3NyIvPjxwYXRoIGQ9Im0yNTYgODMuMDgyYy0zNy44MDQgMC03My4zMjYgNy4xNC0xMDQuMTc5IDE5LjY3NS02NS45MjQgMjYuNzg0LTk4LjE1NCA3OC4xOTktOTguMTU0IDEzNy4yMjggMCAxMTYuOTg5IDExMi43NTMgMjIyLjk2OCAxOTUuMzMzIDI1Nmg3IDE2LjUxNmM4Mi41ODEtMzMuMDMyIDE5OC4xOTQtMTM5LjAxMSAxOTguMTk0LTI1NiAwLTg2LjY1NS05Ni4xMjktMTU2LjkwMy0yMTQuNzEtMTU2LjkwM3oiIGZpbGw9IiNkYWQ4ZGIiLz48cGF0aCBkPSJtNzQuMzIzIDIyMy40NjljMC00OC41MzQgMzAuMTU0LTkxLjk0MyA3Ny41MTktMTIwLjcyNC02NS45MzEgMjYuNzgyLTExMC41NTIgNzguMjA4LTExMC41NTIgMTM3LjI0IDAgMTE2Ljk4OSAxMTUuNjEzIDIyMi45NjggMTk4LjE5NCAyNTZoMTYuNTE2bDE2LjUxNi0xNi41MTZjLTgyLjU4MS0zMy4wMzMtMTk4LjE5My0xMzkuMDExLTE5OC4xOTMtMjU2eiIgZmlsbD0iI2M4YzVjOSIvPjxwYXRoIGQ9Im0yMTkuMDQ3IDQ4Ni4wNzEgMTcuOTg3IDE3Ljk4N2M5LjkyMiA5LjkyMiAyNi4wMDggOS45MjIgMzUuOTI5IDBsMTcuOTg3LTE3Ljk4N2M1LjQ4NC01LjQ4NCAxLjYtMTQuODYtNi4xNTUtMTQuODZoLTU5LjU5MmMtNy43NTYgMC0xMS42NCA5LjM3Ni02LjE1NiAxNC44NnoiIGZpbGw9IiM1ZDUzNjAiLz48IS0taG9uZ2Jhbzo2MjY0MzQ2MS0tPjxjaXJjbGUgY3g9IjE3Ny41NDgiIGN5PSIzMTguNDM2IiBmaWxsPSIjNGIzZjRlIiByPSIyMC42NDUiLz48Y2lyY2xlIGN4PSIzMzQuNDUyIiBjeT0iMzE4LjQzNiIgZmlsbD0iIzRiM2Y0ZSIgcj0iMjAuNjQ1Ii8+PGcgZmlsbD0iI2VjZWFlYyI+PHBhdGggZD0ibTE2NS4xNjEgNDA1LjE0NmgtMTA3LjM1NWMtNC41NjUgMC04LjI1OC0zLjY5NC04LjI1OC04LjI1OHMzLjY5NC04LjI1OCA4LjI1OC04LjI1OGgxMDcuMzU1YzQuNTY1IDAgOC4yNTggMy42OTQgOC4yNTggOC4yNThzLTMuNjkzIDguMjU4LTguMjU4IDguMjU4eiIvPjxwYXRoIGQ9Im0xMDcuMzYzIDQ3MS4yMTFjLTMuMDMyIDAtNS45NDQtMS42NjktNy4zOTUtNC41NjUtMi4wNC00LjA4MS0uMzg3LTkuMDQgMy42OTQtMTEuMDgxbDgyLjU4MS00MS4yOWM0LjA3My0yLjAyNCA5LjAzMi0uMzg3IDExLjA4MSAzLjY5NCAyLjA0IDQuMDgxLjM4NyA5LjA0LTMuNjk0IDExLjA4MWwtODIuNTgxIDQxLjI5Yy0xLjE4Ni41ODgtMi40NDQuODcxLTMuNjg2Ljg3MXoiLz48cGF0aCBkPSJtNDU0LjE5NCA0MDUuMTQ2aC0xMDcuMzU1Yy00LjU2NSAwLTguMjU4LTMuNjk0LTguMjU4LTguMjU4czMuNjk0LTguMjU4IDguMjU4LTguMjU4aDEwNy4zNTVjNC41NjUgMCA4LjI1OCAzLjY5NCA4LjI1OCA4LjI1OHMtMy42OTQgOC4yNTgtOC4yNTggOC4yNTh6Ii8+PHBhdGggZD0ibTQwNC42MzcgNDcxLjIxMWMtMS4yNDIgMC0yLjUtLjI4Mi0zLjY4NS0uODcxbC04Mi41ODEtNDEuMjljLTQuMDgxLTIuMDQtNS43MzQtNy0zLjY5NC0xMS4wODEgMi4wNDgtNC4wODEgNy01LjcxOCAxMS4wODEtMy42OTRsODIuNTgxIDQxLjI5YzQuMDgxIDIuMDQgNS43MzQgNyAzLjY5NCAxMS4wODEtMS40NTIgMi44OTUtNC4zNjQgNC41NjUtNy4zOTYgNC41NjV6Ii8+PC9nPjwvc3ZnPg==" />
 					<!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>-->
 				</div>
-				<div class="open">开</div>
+				<div class="open" onclick="document.getElementById('app').classList.add('opened');">开</div>
+			</div>
+			<div id="lv1">
+				<div class="main">
+					<h1>第一关</h1>
+					<img src="depositphotos_277631910-stock-illustration-happy-new-year-2020-merry.jpg" />
+				</div>
 			</div>
 			<hr />
 			<h2>在拿红包之前，你最好先了解这些内容。</h2>
 			<ol style="font-size: 1.2rem;">
 				<li>这是一个 CTF 闯关游戏，利用你的知识（现学也是可以的啦）解决所有题目，获得红包口令，口令可进入支付宝领取红包。</li>
+				<li>你应该需要电脑才能愉快玩耍。</li>
 				<li>你拿到的所有答案都是八位数字，为了方便控制开始和结束时间，在支付宝领取时，前面需要加上一个“鼠”字。如解题得到 66741003，那么最后的红包口令是“鼠66741003”。</li>
 				<li>通过一关后自然会得到进入下一关的线索，一共有【？】关。</li>
 				<li>本次活动时间从 2020 年 1 月 24 日 20 时开始，持续 24 个小时，如果红包被提前领完，则游戏提前结束。</li>
