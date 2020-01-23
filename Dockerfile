@@ -24,7 +24,7 @@ RUN rm -f /etc/nginx/conf.d/default.conf /etc/php/7.2/fpm/pool.d/* \
 	&& cp -v /app/prepare/_docker/run.sh /app/run.sh \
 	&& cp -v /app/prepare/_docker/nginx.conf /etc/nginx/conf.d/www.conf \
 	&& cp -v /app/prepare/_docker/php-fpm.ini /usr/local/etc/php-fpm.d/pool.conf \
-	&& cd /app/prepare/lv2 && chmod a+x ./import_db.sh && ./import_db.sh \
+	&& cd /app/prepare/lv2 && chmod a+x ./import_db.sh && ./import_db.sh
 
 # deploy code
 RUN echo "Start deploy code" \
