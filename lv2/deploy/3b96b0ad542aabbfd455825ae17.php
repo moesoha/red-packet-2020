@@ -30,7 +30,6 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 		<h1>欢迎来到申必系统！</h1>
 <?php if(!$loggedIn){ ?><!--debug: 没有登录，给登录页面-->
 		<h3><?php echo $loginFailed ? '登录失败！！！' : '请先登录！'; ?></h3>
-		<p><i>为表彰发现这个系统的同志，特送出红包口令一个：<code>55286728</code></i>，和用户名密码一枚：<code>guest</code>/<code>guest</code>。</p>
 		<form method="POST">
 			用户名：<input type="text" name="username" />
 			<br />
@@ -40,7 +39,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 		</form>
 <?php } else { ?><!--debug: 判断是不是管理员 ok-->
 		<h2>记事板</h2>
-		<textarea rows="10" cols="60"><?php echo $isAdmin ? "最后一关: 2020wow2020.hb.lohu.info" : "你又不是 admin，你看你🐎呢？"; ?></textarea>
+		<textarea rows="10" cols="60"><?php echo $isAdmin ? "红包口令：55286728，下一关: ./91e851e85c48e.bin" : "你又不是 admin，你看你🐎呢？"; ?></textarea>
 <?php } ?>
 	</body>
 </html>

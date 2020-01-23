@@ -1,5 +1,1 @@
-对 Surface 的 Type Cover 进行抓包。
-
-可以通过分析 USB 数据包，然后提取其中键盘输入记录，找到通往下一关的网址。
-
-网址就强行定为 https://hb.lohu.info/791de18ac27dfbf/52ed990ff87/
+这里要利用 PHP 中 $_POST 的特性，然后直接把数组怼进 MongoDB 的查询实现注入，就可以不知道 admin 密码登录了。
