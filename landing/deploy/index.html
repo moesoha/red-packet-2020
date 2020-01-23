@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>新年快乐！</title>
+		<style>
+			.redbag {
+				position: relative;
+				height: 540px;
+				width: 380px;
+				margin: auto;
+				padding: 1em;
+				border-radius: 0 0 6px 6px;
+				background: #e3272b;
+				color: #fff;
+				box-shadow: -5px 4px rgba(130,130,130,0.6);
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.redbag .header{
+				top: 0;
+				left: 0;
+				right: 0;
+				position: absolute;
+				height: 190px;
+				border-radius: 0 0 380px 380px;
+				box-shadow: -1px 3px rgba(0,0,0,0.18);
+				background: #da1313;
+			}
+			.redbag img{
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -50px;
+				margin: auto;
+				width: 100px;
+			}
+			.redbag .open{
+				position: relative;
+				top: 60%;
+				display: block;
+				width: 100px;
+				height: 100px;
+				border-radius: 100%;
+				font-size: 36px;
+				margin: auto;
+				text-align: center;
+				line-height: 100px;
+				background: #f9a528;
+				color: #fff;
+				cursor: grab;
+				transition: 0.66s ease all;
+			}
+			.redbag .open:hover{
+				width: 120px;
+				height: 120px;
+				line-height: 120px;
+				font-size: 40px;
+				top: 58%;
+				box-shadow: -5px 5px rgba(0,0,0,0.38);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="redbag">
+				<div class="header">
+					<img src="data:image/svg+xml;utf8;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iNDI1LjI5IiBjeT0iODcuMjExIiBmaWxsPSIjZGFkOGRiIiByPSI4Ni43MSIvPjxjaXJjbGUgY3g9Ijg2LjcxIiBjeT0iODcuMjExIiBmaWxsPSIjYzhjNWM5IiByPSI4Ni43MSIvPjxjaXJjbGUgY3g9Ijg2LjcxIiBjeT0iODcuMjExIiBmaWxsPSIjZmY5YTlmIiByPSI1My42NzciLz48Y2lyY2xlIGN4PSI0MjUuMjkiIGN5PSI4Ny4yMTEiIGZpbGw9IiNmZmI5YjQiIHI9IjUzLjY3NyIvPjxwYXRoIGQ9Im0yNTYgODMuMDgyYy0zNy44MDQgMC03My4zMjYgNy4xNC0xMDQuMTc5IDE5LjY3NS02NS45MjQgMjYuNzg0LTk4LjE1NCA3OC4xOTktOTguMTU0IDEzNy4yMjggMCAxMTYuOTg5IDExMi43NTMgMjIyLjk2OCAxOTUuMzMzIDI1Nmg3IDE2LjUxNmM4Mi41ODEtMzMuMDMyIDE5OC4xOTQtMTM5LjAxMSAxOTguMTk0LTI1NiAwLTg2LjY1NS05Ni4xMjktMTU2LjkwMy0yMTQuNzEtMTU2LjkwM3oiIGZpbGw9IiNkYWQ4ZGIiLz48cGF0aCBkPSJtNzQuMzIzIDIyMy40NjljMC00OC41MzQgMzAuMTU0LTkxLjk0MyA3Ny41MTktMTIwLjcyNC02NS45MzEgMjYuNzgyLTExMC41NTIgNzguMjA4LTExMC41NTIgMTM3LjI0IDAgMTE2Ljk4OSAxMTUuNjEzIDIyMi45NjggMTk4LjE5NCAyNTZoMTYuNTE2bDE2LjUxNi0xNi41MTZjLTgyLjU4MS0zMy4wMzMtMTk4LjE5My0xMzkuMDExLTE5OC4xOTMtMjU2eiIgZmlsbD0iI2M4YzVjOSIvPjxwYXRoIGQ9Im0yMTkuMDQ3IDQ4Ni4wNzEgMTcuOTg3IDE3Ljk4N2M5LjkyMiA5LjkyMiAyNi4wMDggOS45MjIgMzUuOTI5IDBsMTcuOTg3LTE3Ljk4N2M1LjQ4NC01LjQ4NCAxLjYtMTQuODYtNi4xNTUtMTQuODZoLTU5LjU5MmMtNy43NTYgMC0xMS42NCA5LjM3Ni02LjE1NiAxNC44NnoiIGZpbGw9IiM1ZDUzNjAiLz48IS0taG9uZ2Jhbzo2MjY0MzQ2MS0tPjxjaXJjbGUgY3g9IjE3Ny41NDgiIGN5PSIzMTguNDM2IiBmaWxsPSIjNGIzZjRlIiByPSIyMC42NDUiLz48Y2lyY2xlIGN4PSIzMzQuNDUyIiBjeT0iMzE4LjQzNiIgZmlsbD0iIzRiM2Y0ZSIgcj0iMjAuNjQ1Ii8+PGcgZmlsbD0iI2VjZWFlYyI+PHBhdGggZD0ibTE2NS4xNjEgNDA1LjE0NmgtMTA3LjM1NWMtNC41NjUgMC04LjI1OC0zLjY5NC04LjI1OC04LjI1OHMzLjY5NC04LjI1OCA4LjI1OC04LjI1OGgxMDcuMzU1YzQuNTY1IDAgOC4yNTggMy42OTQgOC4yNTggOC4yNThzLTMuNjkzIDguMjU4LTguMjU4IDguMjU4eiIvPjxwYXRoIGQ9Im0xMDcuMzYzIDQ3MS4yMTFjLTMuMDMyIDAtNS45NDQtMS42NjktNy4zOTUtNC41NjUtMi4wNC00LjA4MS0uMzg3LTkuMDQgMy42OTQtMTEuMDgxbDgyLjU4MS00MS4yOWM0LjA3My0yLjAyNCA5LjAzMi0uMzg3IDExLjA4MSAzLjY5NCAyLjA0IDQuMDgxLjM4NyA5LjA0LTMuNjk0IDExLjA4MWwtODIuNTgxIDQxLjI5Yy0xLjE4Ni41ODgtMi40NDQuODcxLTMuNjg2Ljg3MXoiLz48cGF0aCBkPSJtNDU0LjE5NCA0MDUuMTQ2aC0xMDcuMzU1Yy00LjU2NSAwLTguMjU4LTMuNjk0LTguMjU4LTguMjU4czMuNjk0LTguMjU4IDguMjU4LTguMjU4aDEwNy4zNTVjNC41NjUgMCA4LjI1OCAzLjY5NCA4LjI1OCA4LjI1OHMtMy42OTQgOC4yNTgtOC4yNTggOC4yNTh6Ii8+PHBhdGggZD0ibTQwNC42MzcgNDcxLjIxMWMtMS4yNDIgMC0yLjUtLjI4Mi0zLjY4NS0uODcxbC04Mi41ODEtNDEuMjljLTQuMDgxLTIuMDQtNS43MzQtNy0zLjY5NC0xMS4wODEgMi4wNDgtNC4wODEgNy01LjcxOCAxMS4wODEtMy42OTRsODIuNTgxIDQxLjI5YzQuMDgxIDIuMDQgNS43MzQgNyAzLjY5NCAxMS4wODEtMS40NTIgMi44OTUtNC4zNjQgNC41NjUtNy4zOTYgNC41NjV6Ii8+PC9nPjwvc3ZnPg==" />
+					<!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>-->
+				</div>
+				<div class="open">开</div>
+			</div>
+			<hr />
+			<h2>在拿红包之前，你最好先了解这些内容。</h2>
+			<ol style="font-size: 1.2rem;">
+				<li>这是一个 CTF 闯关游戏，利用你的知识（现学也是可以的啦）解决所有题目，获得红包口令，口令可进入支付宝领取红包。</li>
+				<li>你拿到的所有答案都是八位数字，为了方便控制开始和结束时间，在支付宝领取时，前面需要加上一个“鼠”字。如解题得到 66741003，那么最后的红包口令是“鼠66741003”。</li>
+				<li>通过一关后自然会得到进入下一关的线索，一共有【？】关。</li>
+				<li>本次活动时间从 2020 年 1 月 24 日 20 时开始，持续 24 个小时，如果红包被提前领完，则游戏提前结束。</li>
+				<li>共设 2 个红包<!--不包括彩蛋红包-->。第 1 个红包总额 30 人民币元，分 10 个；第 2 个红包总额 66 人民币元，分 10 个。红包领取规则均为“拼手气红包”。</li>
+				<li>这个游戏由 Soha 制作，在游戏结束后也将在 Soha 的博客 https://soha.moe 上放出题解。如有疑问也请通过博客的“关于我”页面上所述的联系方式联系。</li>
+				<li style="color: #ff084a">最后祝大家，新年快乐！</li>
+				<li>最近 2019-nCoV 疫情严峻，大家要注意防范哦！</li>
+				<!-- 出点击“开”字出现第一关的线索之外，本页还有一个彩蛋，是一个隐藏的小红包。自己找吧！ -->
+			</ol>
+		</div>
+	</body>
+</html>
