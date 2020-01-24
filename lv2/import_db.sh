@@ -1,6 +1,7 @@
 #!/bin/sh
 
 mongod --config /etc/mongod.conf &
-sleep 10
+echo "Wait 7s for mongod"
+sleep 7
 mongorestore
 killall mongod
