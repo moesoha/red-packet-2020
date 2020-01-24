@@ -30,6 +30,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 		<h1>欢迎来到申必系统！</h1>
 <?php if(!$loggedIn){ ?><!--debug: 没有登录，给登录页面-->
 		<h3><?php echo $loginFailed ? '登录失败！！！' : '请先登录！'; ?></h3>
+		<p><i>恭喜你发现了这里，赠送账号一枚：<code>guest</code>/<code>guest</code></i></p>
 		<form method="POST">
 			用户名：<input type="text" name="username" />
 			<br />
