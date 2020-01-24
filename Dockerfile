@@ -22,7 +22,8 @@ RUN rm -f /etc/nginx/conf.d/default.conf /etc/php/7.2/fpm/pool.d/* \
 	&& cd /app/prepare/lv2 && chmod a+x ./import_db.sh && ./import_db.sh \
 	&& echo "deploying codes" \
 	&& cp -vr /app/prepare/*/deploy/* /app/www/ \
-	&& chown -R root /app/www && chmod 755 /app/www /app/run.sh
+	&& chown -R root /app/www && chmod 755 /app/www /app/run.sh \
+	&& rm -vrf /app/prepare
 
 EXPOSE 80
 CMD ["/app/run.sh"]
