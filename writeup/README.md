@@ -22,7 +22,7 @@
 
 ![](2_debug.png)
 
-发现了有调试信息没有删除，由此可知，数据库是 MongoDB。在开发的时候很容易遇到的一个问题就是注入，而 MongoDB 可以使用形如 `fieldName: { $condition: value }` 的方式来查询，如果后端没有对这里进行检查，而是直接使用 `$_POST['field']` 的话就会被注入。那么我们将密码的 name 属性改成 `password[$ne]`，`$ne` 就是 MongoDB 中的不等于。
+发现了有调试信息没有删除，由此可知，数据库是 MongoDB。在开发的时候很容易遇到的一个问题就是注入，而 MongoDB 可以使用形如 `fieldName: { $condition: value }` 的方式来查询，如果后端没有对这里进行检查，而是直接使用 `$_POST['field']` 的话就会被注入。那么我们将密码的 name 属性改成 `password[$ne]`，`$ne` 就是 MongoDB 中的不等于。这样子提交以后，后端查询的就是 `{ username: 'admin', password: { $ne: '' } }` 了。
 
 ![](2_injection.png)
 
